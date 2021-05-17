@@ -3,14 +3,15 @@ extends layout
 block content 
     body 
         h1= 'Hop on :)'
-            p
-            form(action="/new" method="POST")
-                fieldset  
-                    p 
-                        label(for="name") Name: 
-                            input(type="text" name="name" value="name")
-                    p 
-                        label(for="message") Message: 
-                            input(type="text" name="message" value="name")
-                    p 
-                        input(type="submit", value="Submit")
+        form(action="/new" method="POST")
+            fieldset  
+                p 
+                    label(for="name") Name: 
+                        input(type="text" name="name" value="name")
+                p 
+                    label(for="message") Message: 
+                        input(type="text" name="message" value="name")
+                p 
+                    input(type="submit", value="Submit")
+        div 
+            a(href="/") < Go back 
