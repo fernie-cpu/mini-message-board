@@ -2,4 +2,11 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Sup TOP staff
+
+  div 
+    ul 
+      each msg, i in message ? message : []
+        li= i + ': ' + msg.text
+        li= i + ': ' + msg.user
+        li= i + ': ' + msg.added
