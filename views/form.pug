@@ -1,0 +1,16 @@
+extends layout 
+
+block content 
+    body 
+        h1= 'Hop on :)'
+            p
+            form(action="/new" method="POST")
+                fieldset  
+                    p 
+                        label(for="user[name]") Name: 
+                            input(type="text" name="user[name]" value="name")
+                    p 
+                        label(for="user[message]") Message: 
+                            input(type="text" name="user[message]" value="name")
+                    p 
+                        input(type="submit", value="Submit")
