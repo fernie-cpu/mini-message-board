@@ -2,22 +2,24 @@ var express = require('express');
 var router = express.Router();
 
 const title = 'Mini Message Board';
+const date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+console.log(date);
 
 const messages = [
   {
     text: 'Hi there, Jeff!',
     user: 'Briggs',
-    added: new Date(),
+    added: date,
   },
   {
     text: 'Doc girl! Hello 👋',
     user: 'Tati',
-    added: new Date(),
+    added: date,
   },
   {
     text: 'Heil, Queen!',
     user: 'Cat Queen',
-    added: new Date(),
+    added: date,
   },
 ];
 
