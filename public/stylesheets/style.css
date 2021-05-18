@@ -9,7 +9,7 @@
 
 body {
   background: #fff;
-  font: 15px 'Helvetica', Arial, sans-serif;
+  font: 16px 'Helvetica', Arial, sans-serif;
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -74,22 +74,77 @@ ul {
   flex: 1 0 auto;
 }
 
-.box {
+.box-msg,
+.form {
   border: 1px solid #ccc;
   border-radius: 6px;
   box-shadow: 0 0 2px 0 rgb(131, 129, 129, 0.75);
   padding: 1rem;
 }
 
+fieldset,
 .box-msg li {
-  max-width: 800px;
-  min-width: 300px;
-  line-height: 1.5;
   border: 1px solid rgb(131, 129, 129);
   border-radius: 4px;
   box-shadow: 0 0 4px 0 rgba(172, 168, 168, 0.75);
   padding: 0.75rem;
+  max-width: 992px;
+  min-width: 400px;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  line-height: 35px;
+}
+
+.field-name,
+.field-msg {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-fields label {
+  margin-left: 0.3rem;
+}
+
+.form-fields input,
+.form-fields textarea {
+  padding: 0.5rem;
+  outline-color: #00b7ff;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.btn {
+  margin-top: 0.65rem;
+  padding: 0.55rem 0.95rem;
+  font-size: 0.96rem;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+}
+
+.box-msg ul {
+  width: 100%;
+}
+
+.box-msg li {
+  line-height: 1.5;
   margin-bottom: 0.69rem;
+}
+
+.date {
+  font-size: 0.65rem;
+  color: rgb(56, 56, 56);
 }
 
 .box .strong {

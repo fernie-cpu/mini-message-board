@@ -11,17 +11,17 @@ block content
             a(href="/") < go back 
 
     section(class='wrapper')
-        div(class='form')
-            form(action="/new" method="POST")
+        div
+            form(action="/new" method="POST" class='form')
                 fieldset  
                     div(class='form-fields')
                         div(class='field-name')
                             label(for="name") Name: 
-                            input(type="text" name="name" value="name")
+                            input(type="text" name="name" placeholder="Enter your name")
 
                         div(class="field-msg")
                             label(for="message") Message: 
-                            textarea(type="textarea" name="message" value="name")
+                            textarea(type="textarea" name="message" placeholder="Enter your message...")
 
                     input(class='btn' type="submit", value="Submit")
     
