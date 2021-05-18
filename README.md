@@ -1,4 +1,4 @@
-## Mini Message Blog
+## Mini Message Board
 
 - Node
 - Express Generator
