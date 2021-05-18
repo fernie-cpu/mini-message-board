@@ -8,7 +8,7 @@ console.log(date);
 const messages = [
   {
     text: 'Hi there, Jeff!',
-    user: 'Briggs',
+    user: 'Fernie',
     added: date,
   },
   {
