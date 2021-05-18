@@ -1,17 +1,28 @@
 extends layout 
 
 block content 
-    body 
-        h1= 'Hop on :)'
-        form(action="/new" method="POST")
-            fieldset  
-                p 
-                    label(for="name") Name: 
-                        input(type="text" name="name" value="name")
-                p 
-                    label(for="message") Message: 
-                        input(type="text" name="message" value="name")
-                p 
-                    input(type="submit", value="Submit")
-        div 
-            a(href="/") < Go back 
+    header(class='header')  
+        h1(class='title')= title
+
+        div(class="subheading")
+            h4(class='subheading-text-2') Say something nice.
+
+        div(class='link') 
+            a(href="/") < go back 
+
+    section(class='wrapper')
+        div(class='form')
+            form(action="/new" method="POST")
+                fieldset  
+                    div(class='form-fields')
+                        div(class='field-name')
+                            label(for="name") Name: 
+                            input(type="text" name="name" value="name")
+
+                        div(class="field-msg")
+                            label(for="message") Message: 
+                            textarea(type="textarea" name="message" value="name")
+
+                    input(class='btn' type="submit", value="Submit")
+    
+    

@@ -1,14 +1,35 @@
 extends layout
 
 block content
-  h1= title
-  p Sup TOP staff
+  header(class='header')  
+    h1(class='title')= title
 
-  div 
-    ul 
-      each msg in messages
-        li= msg.text
-        li= msg.user
-        li= msg.added
-  div 
-    a(href="/new") Add a message 
+    div(class="subheading")
+      h4(class='subheading-text') TOP crew!
+
+    div(class='link') 
+      a(href="/new") > add a message 
+
+  section(class='wrapper')
+    div(class='box')
+      div(class='box-msg') 
+        ul 
+          each msg in messages
+            li
+              p 
+                span(class='strong') Message:  
+                span= msg.text
+              p 
+                span(class='strong') From:  
+                span= msg.user
+              p 
+                span(class='strong') When:  
+                span= msg.added
+
+  footer(class='footer')
+    span(class='footer-text') Created by 
+    a(href='https://github.com/fernie-cpu' target='_blank')
+      span fernie 
+    span with the help of 
+    a(href='https://theodinproject.com' target='_blank')
+      span(class='odin') The Gods

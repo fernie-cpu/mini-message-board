@@ -1,8 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #fff;
+  font: 15px 'Helvetica', Arial, sans-serif;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-  color: #00B7FF;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+a:hover {
+  color: #00b7ff;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  background: black;
+  color: white;
+  font: 2.5rem 'Ubuntu', sans-serif;
+  min-height: 5.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0.5rem;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.75);
+}
+
+.header .link {
+  display: flex;
+  align-self: flex-end;
+  font-size: 1.75rem;
+  padding-right: 0.5rem;
+}
+
+.subheading {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.subheading-text,
+.subheading-text-2 {
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+
+.subheading-text-2 {
+  font-size: 1.5rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  position: relative;
+  min-height: 100%;
+  flex: 1 0 auto;
+}
+
+.box {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 0 2px 0 rgb(131, 129, 129, 0.75);
+  padding: 1rem;
+}
+
+.box-msg li {
+  max-width: 800px;
+  min-width: 300px;
+  line-height: 1.5;
+  border: 1px solid rgb(131, 129, 129);
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 rgba(172, 168, 168, 0.75);
+  padding: 0.75rem;
+  margin-bottom: 0.69rem;
+}
+
+.box .strong {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.footer {
+  flex-shrink: 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background: rgb(0, 0, 0);
+  margin-top: 2rem;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.footer a {
+  font-style: italic;
+}
+
+@media (max-width: 660px) {
+  .header {
+    display: block;
+  }
+
+  .link {
+    display: inline-block;
+    text-align: right;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .box {
+    width: 100%;
+    margin: 0 0.75rem 1rem 0.75rem;
+  }
 }
